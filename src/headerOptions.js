@@ -11,7 +11,7 @@ const HeaderOption = ({myAvatar, Icon, title, onClick}) => {
         <div className='headerOption' onClick={onClick}>
             {Icon && <Icon className='headerOption__icon' />}   
             {myAvatar &&
-                <Avatar className='headerOption__icon'>{user?.email[0]}</Avatar>}
+                <Avatar className='headerOption__icon'>{user?.email[0].toUpperCase()}</Avatar>}
             <h3 className='headerOption__title'>{title}</h3>
         </div>
     );

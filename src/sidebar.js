@@ -22,7 +22,7 @@ const Sidebar = () => {
               
             {/* <Avatar src={thePhoto ? thePhoto :(selectedImage && URL.createObjectURL(selectedImage)) } className='sidebar__avatar'>{Name[0].toUpperCase()}</Avatar> */}
                
-            <Avatar src={user.thePhoto} className='sidebar__avatar'>{user.email[0]}</Avatar>
+            <Avatar src={user.thePhoto} className='sidebar__avatar'>{user.email[0].toUpperCase()}</Avatar>
             <h2>{user.Name}</h2>
             <h4> {user.email} </h4>
 {/* 
