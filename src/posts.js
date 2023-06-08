@@ -9,14 +9,14 @@ import { forwardRef } from 'react';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 
-const Post = forwardRef(({name, description, message, photo}, ref) => {
+const Post = forwardRef(({postName, description, message, photo}, ref) => {
     const user = useSelector(selectUser);
     return (
         <div ref={ref} className='post'>
             <div className="post__header">
-                <Avatar src={photo}>{user.email[0].toUpperCase()}</Avatar>
+                <Avatar src={photo}>{postName[0].toUpperCase()}</Avatar>
                 <div className="post__info">
-                <h3>{name} </h3>
+                <h3>{postName} </h3>
                 <p>{description} </p>
                 </div>
             </div>
