@@ -1,0 +1,102 @@
+.sidebar {
+    position: sticky;
+    top:80px;
+    flex:0.2;
+    text-align: center;
+    border-radius: 10px;
+    height: fit-content;
+  
+}
+.sidebar__avatar{
+    margin-bottom: 10px;
+}
+.sidebar__top > h2 {
+    font-size: 18px;
+}
+.sidebar__top > h4 {
+    font-size: 12px;
+    color: gray;
+}
+.sidebar__top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+.sidebar__top > img{
+    width: 100%;
+    margin-bottom: -20px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}   
+.sidebar__stat{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+.sidebar__stat > p{
+    font-size: 13px;
+    font-weight: 600px;
+}
+.sidebar__statNumber {
+    font-weight: bold;
+    color:#0a66c2 ;
+}
+.sidebar__stats{
+    padding: 10px;
+    background-color: white;
+    border:1px solid lightgray;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.sidebar__bottom {
+    text-align: left;
+    border: 1px solid lightgray;
+    padding:10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.sidebar__bottom > p {
+    font-size: 13px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.sidebar__recentItem {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.sidebar__recentItem:hover {
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+}
+.link{
+    padding-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+label{
+  display: inline-block;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  color: #0177b7;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
