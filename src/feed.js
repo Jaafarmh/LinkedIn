@@ -18,7 +18,6 @@ const Feed = () => {
     const [input, setInput] = useState('');
     const colRef = collection (db,'Posts');
     const user = useSelector(selectUser)
-    const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect (()=>{
         const q = query(colRef, orderBy('createdAt','desc'));
@@ -40,7 +39,7 @@ const Feed = () => {
                 description: user.email,
                 message : input,
                 photo : user.thePhoto || '',
-                createdAt: serverTimestamp(),
+                createdAt: serverTimestamp()
                 });
                 setInput('');
           

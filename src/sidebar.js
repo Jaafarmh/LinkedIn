@@ -2,11 +2,9 @@ import { Avatar } from '@mui/material';
 import './sidebar.css';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
-import { useState } from 'react';
 
 const Sidebar = () => {
     const user = useSelector(selectUser)
-    const {Name, email, thePhoto} = user;
 
     // const [selectedImage, setSelectedImage] = useState(null);
 
@@ -24,9 +22,9 @@ const Sidebar = () => {
               
             {/* <Avatar src={thePhoto ? thePhoto :(selectedImage && URL.createObjectURL(selectedImage)) } className='sidebar__avatar'>{Name[0].toUpperCase()}</Avatar> */}
                
-            <Avatar src={thePhoto } className='sidebar__avatar'>{Name[0].toUpperCase()}</Avatar>
-            <h2>{Name}</h2>
-            <h4> {email} </h4>
+            <Avatar src={user.thePhoto} className='sidebar__avatar'>{user.email[0]}</Avatar>
+            <h2>{user.Name}</h2>
+            <h4> {user.email} </h4>
 {/* 
             <input
                 type="file"

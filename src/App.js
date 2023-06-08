@@ -14,8 +14,6 @@ function App() {
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
 
-
- 
   useEffect(()=>{
     
         onAuthStateChanged(auth, (userAuth) => {
@@ -25,7 +23,7 @@ function App() {
              dispatch(login({
               uid : uid,
               email: email,
-              Name : displayName,
+              name : displayName,
               thePhoto: photoURL,
             }))
             // ...
