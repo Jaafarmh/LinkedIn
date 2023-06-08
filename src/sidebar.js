@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 
 const Sidebar = () => {
-    const user = useSelector(selectUser)
+    const user = useSelector(selectUser);
 
     // const [selectedImage, setSelectedImage] = useState(null);
 

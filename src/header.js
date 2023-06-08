@@ -40,7 +40,7 @@ const Header = () => {
                 <HeaderOption Icon={ChatIcon} title='Messaging' />
                 <HeaderOption Icon={NotificationsIcon} title='Notifications' />
                 <HeaderOption 
-                 title='me'
+                 title='Sign out'
                  onClick = {logOutOfApp}
                  myAvatar={true}  />
             
