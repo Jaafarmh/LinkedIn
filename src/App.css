@@ -12,6 +12,8 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+ 
+
 @media (max-width: 900px) {
     .app__body{
         display: flex;
@@ -24,6 +26,7 @@
     .header__right {
          display: none !important; 
     }
+ 
   }
   
   @media (max-width: 480px) {
@@ -52,4 +55,4 @@
     
     
   }
-  
+ 

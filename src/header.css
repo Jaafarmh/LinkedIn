@@ -44,3 +44,35 @@
 .header__right :hover{
     color:black;
 }
+
+
+.MuiSvgIcon-root.hamburger{
+    display: none;
+}
+.header__mobile{
+    display: none;
+}
+@media (max-width:900px){
+    .MuiSvgIcon-root.hamburger{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    height: 32px !important;
+    width: 32px !important;
+    margin: auto 0;
+  }
+  
+  .header__mobile{
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.header__mobile :hover {
+    color:black;
+    
+}
+}
