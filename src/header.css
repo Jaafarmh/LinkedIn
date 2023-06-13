@@ -64,9 +64,10 @@
   
   .header__mobile{
     display: flex;
+    width: fit-content;
     position: absolute;
     top: 70px;
-    right: 90px;
+    
     background-color: white;
     padding: 10px;
     border-radius: 10px;
