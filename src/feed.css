@@ -1,6 +1,6 @@
 .feed{
     margin: 0 20px;
-  
+    flex: 0.6;
 
 }
 .feed__inputContainer {
@@ -32,7 +32,7 @@
 
 .feed__input > form > input {
     border:none;
-    flex:1;
+    /* flex:1; */
     margin-left:10px;
     font-weight: 600;
     outline-width: 0;
@@ -49,3 +49,16 @@
 
 
 }
+@media (max-width:500px){
+    .feed, .feed__inputContainer, x{
+        width:300px;
+        font-size: smaller;
+    }
+    .feed__input {
+        font-size: small;
+        width: 250px;
+    }
+     .feed__inputOptions{
+        font-size: smaller;
+     }
+    }

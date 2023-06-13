@@ -30,14 +30,17 @@
  
   }
   
-  @media (max-width: 480px) {
-    .app__body{
+  @media (max-width: 500px) {
+    .app{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        min-width: 200px;
     }
     .sidebar{
     position: static !important;
      width: fit-content;
+    
      margin-bottom: 10px;
      margin-left: auto;
      margin-right: auto;
@@ -49,12 +52,12 @@
     }
     
     .widgets{
-        min-width: 200px;
+        
         
         width: fit-content;
         margin: 0 auto;
     }
-    
+   
     
   }
  

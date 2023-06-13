@@ -15,7 +15,6 @@
 .login > form{
     display: flex;
     flex-direction: column;
-    
    
 }
 .login > form >input {
@@ -23,7 +22,7 @@
     margin-bottom: 10px;
     font-size: large;
     height: 50px;
-    width: 350px;
+    
     border-radius: 5px;
 }
 .login > form > button {
@@ -41,4 +40,17 @@
 }
 .login > p {
     margin-top: 20px;
+}
+@media (max-width: 450px){
+    .login{
+        width: fit-content;
+        min-width: 200px;
+    }
+    .login > form >input {
+   width: 250px;
+   font-size: small;
+}
+.login > form > button {
+    width: 266px;
+}
 }
