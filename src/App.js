@@ -18,13 +18,11 @@ function App() {
     
         onAuthStateChanged(auth, (userAuth) => {
           if (userAuth) {
-            const {uid,email,displayName,photoURL} = userAuth;
-            console.log(userAuth)
              dispatch(login({
-              uid : uid,
-              email: email,
-              name : displayName,
-              thePhoto: photoURL,
+              uid : userAuth.uid,
+              email: userAuth.email,
+              displayName : userAuth.displayName,
+              photoUrl: userAuth.photoURL
             }))
             // ...
           } else {
@@ -36,7 +34,7 @@ function App() {
 
   
   return (
-    <div className="app">
+    <div className="app ">
     <Header />
     {!user ?
      <Login /> :

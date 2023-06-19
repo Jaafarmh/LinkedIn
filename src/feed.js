@@ -35,10 +35,10 @@ const Feed = () => {
     const sendPost = async (e) => {
         e.preventDefault();
           await addDoc(collection(db, "Posts"), {
-                name: user.Name,
+                name: user.displayName,
                 description: user.email,
                 message : input,
-                photo : user.thePhoto || '',
+                photoUrl : user.photoUrl || '',
                 createdAt: serverTimestamp()
                 });
                 setInput('');
@@ -88,12 +88,12 @@ const Feed = () => {
             </div>
             <FlipMove>
 
-            {posts.map(({id, data:{name,description,message,photo}}) => (
+            {posts.map(({id, data:{name,description,message,photoUrl}}) => (
                 <Post
                 key={id}
-                postName={name}
+                name={name}
                 description={description}
-                photo={photo}
+                photoUrl={photoUrl}
                 message={message}
                  />
             )  )}

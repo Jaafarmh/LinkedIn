@@ -19,6 +19,7 @@ const Header = () => {
     const logOutOfApp =()=>{
         dispatch(logout());
         signOut(auth);
+        setIsHeaderOpen(false)
         console.log('user logged out')
     }
     const openHeaderRight = ()=> {
@@ -56,7 +57,7 @@ const Header = () => {
 
         {headerIsOpen &&
               <div className="header__mobile">
-                <HeaderOption Icon={AddHomeIcon} className='one' title='Home' />
+                <HeaderOption Icon={AddHomeIcon} className='one' title='Home2' />
                 <HeaderOption Icon={SupervisorAccountIcon} title='My Network' />
                 <HeaderOption Icon={BusinessCenterIcon} title='Jobs' />
                 <HeaderOption Icon={ChatIcon} title='Messaging' />

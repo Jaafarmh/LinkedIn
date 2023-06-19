@@ -23,8 +23,8 @@ const Login = () => {
              dispatch(login({
                email : user.email,
                uid : user.uid,
-               Name:user.displayName,
-              thePhoto:user.photoURL
+               displayName:user.displayName,
+              photoUrl:user.photoURL
              }))
            })
           console.log('user logged in successfuly')
@@ -34,29 +34,33 @@ const Login = () => {
     }
 
     const registerToApp =async () => {
-        if(!name) {
+        if(!name) { 
           return alert('please enter a full name')
         }
         createUserWithEmailAndPassword(auth, email, password)
        .then((userAuth) => {
           // Signed in 
           const user = userAuth.user;
-          updateProfile(user, {
-            displayName: name,
-            photoURL: profilePic,
-           })
+
+           updateProfile  (user, {
+             displayName: name,
+             photoURL: profilePic,
+             
+            })
+            
            
            .then(() => {
-           console.log('Profile Updatedd',user);   
+           console.log('Profile Updatedd',user.displayName);   
           dispatch(login({
             email : user.email,
             uid :user.uid,
-            Name:name,
-            thePhoto:profilePic
+            displayName:name,
+            photoUrl:profilePic
           }))
           })
 
-        }).catch((err)=>console.log(err))
+        })
+        .catch((err)=>console.log(err))
       
       }
 
