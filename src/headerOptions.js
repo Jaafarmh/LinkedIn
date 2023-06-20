@@ -4,14 +4,15 @@ import { Avatar } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 
-const HeaderOption = ({myAvatar, Icon, title, onClick}) => {
+const HeaderOption = ({name,myAvatar, Icon, title, onClick}) => {
     const user = useSelector(selectUser);    
     return (
         <div className='headerOption' onClick={onClick}>
             {Icon && <Icon className='headerOption__icon' />}   
             {myAvatar &&
             <Avatar src={user?.photoUrl } className='headerOption__icon'>
-            {user?.email[0].toUpperCase()}
+            {name }
+          
             </Avatar>
                 }
                   

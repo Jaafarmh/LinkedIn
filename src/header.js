@@ -5,9 +5,9 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './header.css';
-import { logout } from './features/userSlice';
+import { logout, selectUser } from './features/userSlice';
 import { signOut } from 'firebase/auth';
 import { auth } from './firebase';
 import { useState } from 'react';
@@ -15,7 +15,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Header = () => { 
     const [headerIsOpen , setIsHeaderOpen] =useState(false)
     const dispatch = useDispatch();
-    
+    const user=useSelector(selectUser);
+
     const logOutOfApp =()=>{
         dispatch(logout());
         signOut(auth);
@@ -40,8 +41,9 @@ const Header = () => {
 
             </div>
 
-        
-            <div className="header__right">
+   
+
+            <div className="header__right ">
                 <HeaderOption Icon={AddHomeIcon} title='Home' />
                 <HeaderOption Icon={SupervisorAccountIcon} title='My Network' />
                 <HeaderOption Icon={BusinessCenterIcon} title='Jobs' />
@@ -50,9 +52,13 @@ const Header = () => {
                 <HeaderOption 
                  title='Sign out'
                  onClick = {logOutOfApp}
-                 myAvatar={true}  />
+                 myAvatar={true} 
+                 name={user && user.displayName && user.displayName[0].toUpperCase()} />
+
+                           
             </div>
         
+
           <MenuIcon className='hamburger' onClick={openHeaderRight}>Open</MenuIcon>
 
         {headerIsOpen &&
@@ -65,7 +71,9 @@ const Header = () => {
                 <HeaderOption 
                  title='Sign out'
                  onClick = {logOutOfApp}
-                 myAvatar={true}  />
+                 myAvatar={true}
+                 name={user && user.displayName[0].toUpperCase()}
+                   />
             </div>
         }    
         </div>
